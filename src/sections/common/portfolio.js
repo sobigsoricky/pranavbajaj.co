@@ -9,9 +9,9 @@ const Portfolio = () => {
     const router = useRouter()
 
     const projects = [
-        { id: "project1", name: "Byju's", tag: "Edtech", link: "#", img: "/images/byjus.png" },
-        { id: "project2", name: "Peppercontent", tag: "Marketing", link: "#", img: "/images/pepper-content-logo 2.png" },
-        { id: "project3", name: "Builder Ai", tag: "Development", link: "#", img: "/images/builderai.png" },
+        { id: "project1", name: "Slack", tag: "Edtech", link: "https://rankfast.co/portfolio/", img: "/images/byjus.png" },
+        { id: "project2", name: "Zoom", tag: "Marketing", link: "https://rankfast.co/portfolio/", img: "/images/pepper-content-logo 2.png" },
+        { id: "project3", name: "Builder Ai", tag: "Development", link: "https://rankfast.co/portfolio/", img: "/images/builderai.png" },
     ]
 
     return (
@@ -58,8 +58,8 @@ const Portfolio = () => {
                                         className="mySwiper"
                                     >
                                         {
-                                            projects && projects.map(item => <SwiperSlide key={item.id}>
-                                                <Card className='projectCard' sx={{ position: 'relative' }}>
+                                            projects && projects.map(item => <SwiperSlide key={item.id} style={{ height: '100%' }}>
+                                                <Card className='projectCard' sx={{ position: 'relative', height: '100%' }}>
                                                     <CardMedia component="img" image={item.img} />
                                                     <CardContent>
                                                         <Box>
